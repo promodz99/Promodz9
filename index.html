@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>promodz</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Styles for the WhatsApp pop-up container */
+        #whatsapp-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            display: none;
+            z-index: 9999;
+        }
+
+        /* Styles for the WhatsApp icon */
+        #whatsapp-popup a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            color: #25D366;
+            text-decoration: none;
+            /* Animation properties */
+            animation: iconColoring 5s infinite alternate;
+        }
+
+        /* Styles for the "Contact us on WhatsApp" text */
+      #whatsapp-popup p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(45deg, #FFD700, #FF5733, #800080, #3498db, #e74c3c, #25D366);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400% 100%;
+    animation: textGradient 7s infinite;
+}
+
+/* Gradient animation keyframes for the text */
+@keyframes textGradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300% 0;
+    }
+}
+
+       
+        }
+    </style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Styles for the WhatsApp icon container */
+        #whatsapp-container {
+            position: fixed;
+            bottom: 60px;
+            right: 30px;
+             margin: 5px;
+          
+            background-color: transparent;
+            z-index: 9999;
+         
+        }
+
+        /* Styles for the WhatsApp icon */
+        #whatsapp-icon {
+            font-size: 40px;
+            color: #25D366;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        /* Styles when hovering over the WhatsApp icon */
+        #whatsapp-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+  
+  <!-- Favicons -->
+  <link href="assets/img/ff.png" rel="icon">
+  <link href="assets/img/ff.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Developer Name: Habib ktk
+  * Updated: Jul 27 2023 
+  * Author: Habib
+  ======================================================== -->
+</head>
+
+<body>
+ <!-- WhatsApp Pop-up -->
+    <div id="whatsapp-popup">
+        <!-- Replace the link and icon with your actual WhatsApp number and icon -->
+        <a href="https://wa.me/+923201580144" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+       
+             <p> Contact us on WhatsApp</p>
+
+        <!-- You can add more content or contact options in the pop-up if needed -->
+    </div>
+
+    <!-- Add your website content here -->
+
+    <!-- Add your JavaScript code here -->
+    <script>
+        // Show the WhatsApp pop-up when the user visits the website
+        window.onload = function() {
+            document.getElementById("whatsapp-popup").style.display = "block";
+        };
+
+        // Hide the WhatsApp pop-up when the user clicks on it or the text
+        document.getElementById("whatsapp-popup").addEventListener("click", function(event) {
+            if (event.target.id === "whatsapp-popup" || event.target.tagName === "P") {
+                document.getElementById("whatsapp-popup").style.display = "none";
+            }
+        });
+    </script>
+
+
+ <div id="whatsapp-container">
+        <a href="https://wa.me/+923201580144" target="_blank">
+            <i id="whatsapp-icon" class="fab fa-whatsapp"></i> <!-- WhatsApp icon -->
+        </a>
+    </div>
+
+    <!-- Add your JavaScript code here (if needed) -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+       
+           <a href="index.html" class="logo"><img src="assets/img/logo4.png" alt="header logo" class="img-fluid"></a>
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><a class="nav-link scrollto" href="#services">Services</a></li>
+   
+              <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            
+                <ul>
+                 
+                
+            
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/1.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">We are professional</h2>
+                <p class="animate__animated animate__fadeInUp">We are professional and committed to providing exemplary services that meet and exceed our clients' expectations.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/2.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">But indeed we also accuse them</h2>
+                <p class="animate__animated animate__fadeInUp">For in free time, when we are free to choose and nothing prevents us from doing what pleases us the most, all pleasure must be assumed, all pain rejected. At certain times, however, you are either obliged to perform duties.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/3.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">But at certain times</h2>
+                <p class="animate__animated animate__fadeInUp">I will explain the sayings of the happy life. For no one despises or hates or flees from pleasure because it is pleasure, but because great pains result to those who do not know how to follow pleasure with reason..</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/4.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">For free time</h2>
+                <p class="animate__animated animate__fadeInUp">During  free time, I enjoy various activities such as reading, listening to music, going for walks, and spending time with friends and family.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/5.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">He is looking for some great one</h2>
+                <p class="animate__animated animate__fadeInUp">It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. For to come to the smallest detail, no one should practice any kind of work unless he derives some benefit from it.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section Section ======= -->
+    <section id="featured-services">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 box">
+            <i class="bi bi-briefcase"></i>
+            <h4 class="title"><a href="">Graphic Design Services</a></h4>
+            <p class="description"> Professional graphics and visual assets to enhance your online presence.</p>
+          </div>
+
+          <div class="col-lg-4 box box-bg">
+            <i class="bi bi-card-checklist"></i>
+            <h4 class="title"><a href="">Web 2.0 and Web 3.0 Integration</a></h4>
+            <p class="description">Implementing cutting-edge technologies and interactive elements for an immersive user experience.</p>
+          </div>
+
+          <div class="col-lg-4 box">
+            <i class="bi bi-binoculars"></i>
+            <h4 class="title"><a href="">Support and Maintenance</a></h4>
+            <p class="description">Offering reliable post-launch support and regular website maintenance to keep everything running smoothly.</p>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>We are a static web agency specializing in graphic designing, web development (both Web 2.0 and Web 3.0), and mobile app development. Our team is passionate about crafting innovative digital solutions for your needs.</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+                Our Mission: To empower businesses with innovative solutions, creating lasting impact and fostering growth in a dynamic digital landscape.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+                A strategic roadmap designed to drive success, leveraging cutting-edge technologies and industry best practices to achieve your goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+               To be a leading force in the industry, revolutionizing digital experiences and transforming businesses through creativity and innovation.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Services</h3>
+          <p> We offer a comprehensive range of solutions, including graphic design, web development, mobile app development, SEO optimization, and e-commerce solutions, tailored to meet your unique needs and elevate your online presence.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Social Media Integration</a></h4>
+            <p class="description"> Connecting your website to your social media profiles for seamless cross-channel promotion.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Mobile App Development</a></h4>
+            <p class="description">Crafting innovative and feature-rich mobile applications for iOS and Android platforms.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Analytics and Reporting</a></h4>
+            <p class="description">Tracking website performance with detailed analytics and providing regular reports for data-driven decision making.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Collaborative Approach</a></h4>
+            <p class="description">Working closely with clients throughout the development process to ensure their vision is brought to life.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Content Management System (CMS)</a></h4>
+            <p class="description">Easy-to-use platforms that allow you to update and manage your website effortlessly.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">SEO Optimization</a></h4>
+            <p class="description">Ensuring your website ranks well in search engines and attracts organic traffic.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action">
+      <div class="container text-center" data-aos="zoom-in">
+        <h3>Call To Action</h3>
+        <p> Take the first step towards success. Contact us now to discuss your project and unlock the full potential of your digital journey. Let's bring your vision to life!</p>
+        <a class="cta-btn" href="#">Call To Action</a>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Our Skills</h3>
+          <p>With expertise in graphic designing, web development, mobile app development, SEO strategies, and e-commerce solutions, we possess the proficiency to turn your ideas into reality and deliver exceptional results.</p>
+        </header>
+
+        <div class="skills-content">
+
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">HTML <i class="val">100%</i></span>
+            </div>
+          </div>
+
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">CSS <i class="val">90%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+            </div>
+          </div>
+
+            <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Reacts <i class="val">85%</i></span>
+            </div>
+          </div>
+
+             <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Python <i class="val">75%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Photoshop <i class="val">95%</i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Facts</h3>
+          <p>Our team boasts years of collective experience in the industry, ensuring a wealth of knowledge and expertise.</p>
+        </header>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1364" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="38" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+        <div class="facts-img">
+          <img src="assets/img/facts-img.png" alt="" class="img-fluid">
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+     <!-- End Portfolio Section -->
+
+    <!-- ======= Our Clients Section ======= -->
+    <section id="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>Our Clients</h3>
+        </header>
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Our Clients Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Meet Our Team</h3>
+          </a>
+        </header>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-1.png" class="testimonial-img" alt="">
+                <h3>Habib Ktk</h3>
+                <h4>Co-Founder </h4>
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 Meet our co-founder, a vital pillar of our agency. With a blend of creativity and determination, they drive our client-focused approach, ensuring every campaign reflects innovation and a dedication to achieving outstanding results.
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-2.png" class="testimonial-img" alt="">
+                <h3>Ali Gul</h3>
+                <h4>CEO</h4>
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  "As the driving force behind our social media marketing agency, our CEO combines a strategic mindset with a profound understanding of digital trends. With a proven track record of leadership, they inspire our team to deliver exceptional results and shape impactful campaigns that resonate across the online landscape.
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+             <!-- 
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+       <!-- 
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+       <!-- 
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div> <!-- End testimonial item -->
+       
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Team Section ======= -->
+   
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h3>Contact Us</h3>
+          <p>We'd love to hear from you! If you have any questions, inquiries, or would like to discuss a project, feel free to get in touch with us. You can reach us through the contact form below or directly via email or phone. Our team is ready to assist you and explore how we can help bring your ideas to life. We look forward to connecting with you!</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>Islamabad,pakistan</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+92 320 1580144">+92 320 1580144</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:promodzoffical@gmail.com">promodzoffical@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+           <a href="index.html" class="logo"><img src="assets/img/logo4.png" alt="fotter logo" class="img-fluid"></a>
+           <br></br>
+            <p>We are a static web agency specializing in graphic designing, web development (both Web 2.0 and Web 3.0), and mobile app development. Our team is passionate about crafting innovative digital solutions for your needs.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong> Adddress: </strong>Islamabad,pakistan <br>
+              <strong>Phone:</strong> +92 320 1580144<br>
+              <strong>Email:</strong> promodz@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Stay updated with the latest trends, industry insights, and exciting news by subscribing to our newsletter.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Promodz</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        developer:Habib
+      -->
+        Develop by <a href="https://breakingblogworld.com/">Habib Ktk</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!--  Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
